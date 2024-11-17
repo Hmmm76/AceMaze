@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://ts63eiltyjcd"
-path="res://.godot/imported/DIOGENES.ttf-de4d5ae2c56d90173af40b83e74781ac.fontdata"
+path="res://.godot/imported/DIOGENES.ttf-ba212b59426ef22b64ab7973755a18b6.fontdata"
 
 [deps]
 
-source_file="res://DIOGENES.ttf"
-dest_files=["res://.godot/imported/DIOGENES.ttf-de4d5ae2c56d90173af40b83e74781ac.fontdata"]
+source_file="res://main_menu/DIOGENES.ttf"
+dest_files=["res://.godot/imported/DIOGENES.ttf-ba212b59426ef22b64ab7973755a18b6.fontdata"]
 
 [params]
 
