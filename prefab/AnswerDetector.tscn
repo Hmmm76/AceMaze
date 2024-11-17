@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://dopmd3ahld8rt"]
+
+[ext_resource type="Texture2D" uid="uid://cx3swat0qfi06" path="res://wall_angle_piece_2.png" id="1_4gxmc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_18qm8"]
+size = Vector2(360, 360)
+
+[node name="AnswerDetector" type="StaticBody2D"]
+scale = Vector2(0.1, 0.1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_4gxmc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-9.53674e-06, 9.53674e-06)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_18qm8")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

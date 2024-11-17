@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://pi8nk7njfh7g"]
+
+[ext_resource type="Script" path="res://CharacterController/PlayerController.cs" id="1_rhe8n"]
+[ext_resource type="SpriteFrames" uid="uid://7u7m8yad6qhi" path="res://CharacterController/ImagesForSprites/Anims.tres" id="2_71l4u"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hhu0u"]
+radius = 85.992
+height = 193.256
+
+[node name="CharacterBody2D" type="CharacterBody2D" node_paths=PackedStringArray("_animatedSprite")]
+scale = Vector2(0.2, 0.21267)
+script = ExtResource("1_rhe8n")
+_animatedSprite = NodePath("AnimatedSprite2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.988465, 1.31388)
+shape = SubResource("CapsuleShape2D_hhu0u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.065, 1.065)
+sprite_frames = ExtResource("2_71l4u")
+animation = &"Idle_left"
