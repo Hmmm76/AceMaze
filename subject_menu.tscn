@@ -1,16 +1,24 @@
-[gd_scene load_steps=9 format=3 uid="uid://chewrbnstp7hj"]
+[gd_scene load_steps=10 format=3 uid="uid://byfnx2ah71cb6"]
 
-[ext_resource type="FontFile" uid="uid://ts63eiltyjcd" path="res://DIOGENES.ttf" id="1_4gpv3"]
-[ext_resource type="Script" path="res://main_menu.gd" id="1_84nj2"]
-[ext_resource type="Texture2D" uid="uid://n4e5epxqxc1c" path="res://IMG_6811.png" id="2_h71nv"]
-[ext_resource type="Texture2D" uid="uid://ron0tbpts5mg" path="res://sign_one_plank.png" id="4_di5lu"]
-[ext_resource type="Script" path="res://control.gd" id="4_tlt6b"]
+[ext_resource type="Script" path="res://main_menu.gd" id="1_ndm1g"]
+[ext_resource type="Texture2D" uid="uid://n4e5epxqxc1c" path="res://IMG_6811.png" id="2_pqg4q"]
+[ext_resource type="FontFile" uid="uid://ts63eiltyjcd" path="res://DIOGENES.ttf" id="3_5ag2v"]
+[ext_resource type="Texture2D" uid="uid://ron0tbpts5mg" path="res://sign_one_plank.png" id="4_xo23m"]
+[ext_resource type="Script" path="res://control.gd" id="5_fvned"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1w50k"]
-texture = ExtResource("2_h71nv")
+texture = ExtResource("2_pqg4q")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7yndh"]
-texture = ExtResource("4_di5lu")
+texture = ExtResource("4_xo23m")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rjkda"]
+bg_color = Color(0.203922, 0.184314, 0.172549, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 7
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pcswa"]
 bg_color = Color(0.203922, 0.184314, 0.172549, 1)
@@ -31,7 +39,7 @@ offset_right = -69.0
 offset_bottom = -28.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_84nj2")
+script = ExtResource("1_ndm1g")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -54,11 +62,11 @@ offset_bottom = 340.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.174855, 0.107144, 0.00228675, 1)
 theme_override_constants/line_spacing = 0
-theme_override_fonts/font = ExtResource("1_4gpv3")
+theme_override_fonts/font = ExtResource("3_5ag2v")
 theme_override_font_sizes/font_size = 100
 theme_override_styles/normal = SubResource("StyleBoxTexture_7yndh")
 text = "
-ACEMAZE"
+SUBJECT"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -66,9 +74,31 @@ vertical_alignment = 1
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("4_tlt6b")
+script = ExtResource("5_fvned")
 
-[node name="Start" type="Button" parent="Control"]
+[node name="Back2" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 888.0
+offset_top = 457.0
+offset_right = 1003.0
+offset_bottom = 571.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(0.94902, 0.329412, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.862745, 0.709804, 0, 1)
+theme_override_colors/font_color = Color(1, 0.890196, 0, 1)
+theme_override_fonts/font = ExtResource("3_5ag2v")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rjkda")
+text = "BACK"
+icon_alignment = 1
+
+[node name="Chemistry" type="Button" parent="Control"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -76,62 +106,62 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 383.0
-offset_top = 222.0
+offset_top = 217.0
 offset_right = 643.0
-offset_bottom = 340.0
+offset_bottom = 335.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_hover_color = Color(0.94902, 0.329412, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.862745, 0.709804, 0, 1)
 theme_override_colors/font_color = Color(1, 0.890196, 0, 1)
-theme_override_fonts/font = ExtResource("1_4gpv3")
+theme_override_fonts/font = ExtResource("3_5ag2v")
 theme_override_font_sizes/font_size = 70
 theme_override_styles/pressed = SubResource("StyleBoxFlat_pcswa")
-text = "PLAY"
+text = "Chemistry"
 icon_alignment = 1
 
-[node name="Options" type="Button" parent="Control"]
+[node name="Math" type="Button" parent="Control"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 220.0
-offset_top = 347.0
-offset_right = 452.0
-offset_bottom = 449.0
+offset_left = 579.0
+offset_top = 338.0
+offset_right = 815.0
+offset_bottom = 456.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_hover_color = Color(0.94902, 0.329412, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.862745, 0.709804, 0, 1)
 theme_override_colors/font_color = Color(1, 0.890196, 0, 1)
-theme_override_fonts/font = ExtResource("1_4gpv3")
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("3_5ag2v")
+theme_override_font_sizes/font_size = 70
 theme_override_styles/pressed = SubResource("StyleBoxFlat_pcswa")
-text = "OPTIONS"
+text = "Math"
+icon_alignment = 1
 
-[node name="Quit" type="Button" parent="Control"]
+[node name="Biology" type="Button" parent="Control"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 584.0
-offset_top = 342.0
-offset_right = 803.0
-offset_bottom = 451.0
+offset_left = 213.0
+offset_top = 341.0
+offset_right = 465.0
+offset_bottom = 459.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_hover_color = Color(0.94902, 0.329412, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.862745, 0.709804, 0, 1)
 theme_override_colors/font_color = Color(1, 0.890196, 0, 1)
-theme_override_fonts/font = ExtResource("1_4gpv3")
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("3_5ag2v")
+theme_override_font_sizes/font_size = 70
 theme_override_styles/pressed = SubResource("StyleBoxFlat_pcswa")
-text = "QUIT"
+text = "Biology"
+icon_alignment = 1
 
-[connection signal="pressed" from="Control/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="Control/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="Control/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Control/Back2" to="." method="_on_back_2_pressed"]
